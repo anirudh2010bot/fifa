@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIFA Interactive Hub</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+<h1>⚽ FIFA HUB</h1>
+
+<p>
+Explore FIFA World Cups, legends, records, statistics,
+timeline and country comparisons.
+</p>
+
+<button class="btn" onclick="scrollToSection()">
+Explore FIFA
+</button>
+
+<button class="btn" onclick="toggleTheme()">
+🌙 Toggle Theme
+</button>
+
+</header>
+
+<section id="about">
+
+<h2 class="section-title">About FIFA</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌍 FIFA</h3>
+<p>
+Founded in 1904, FIFA governs international football.
+</p>
+</div>
+
+<div class="card">
+<h3>🏆 World Cup</h3>
+<p>
+The world's biggest sporting tournament.
+</p>
+</div>
+
+<div class="card">
+<h3>⚽ Members</h3>
+<p>
+211 national associations are affiliated with FIFA.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">World Cup Statistics</h2>
+
+<div class="stats">
+
+<div class="stat-box">
+<div class="stat-number" id="cups">0</div>
+<p>World Cups</p>
+</div>
+
+<div class="stat-box">
+<div class="stat-number" id="teams">0</div>
+<p>Member Nations</p>
+</div>
+
+<div class="stat-box">
+<div class="stat-number" id="goals">0</div>
+<p>Goals in 2022</p>
+</div>
+
+<div class="stat-box">
+<div class="stat-number" id="fans">0</div>
+<p>Million Fans</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Search World Cup Winners</h2>
+
+<div class="search-container">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search country..."
+onkeyup="filterWinners()">
+
+<div id="winnersList"></div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">🏆 World Cup Timeline</h2>
+
+<div class="cards">
+
+<div class="card timeline-card"
+onclick="showYear('1930','Uruguay won the first FIFA World Cup.')">
+1930
+</div>
+
+<div class="card timeline-card"
+onclick="showYear('1958','Pelé wins his first FIFA World Cup.')">
+1958
+</div>
+
+<div class="card timeline-card"
+onclick="showYear('1986','Maradona leads Argentina to victory.')">
+1986
+</div>
+
+<div class="card timeline-card"
+onclick="showYear('2010','Spain wins its first World Cup.')">
+2010
+</div>
+
+<div class="card timeline-card"
+onclick="showYear('2022','Argentina wins in Qatar with Lionel Messi.')">
+2022
+</div>
+
+</div>
+
+<div id="timelineInfo" class="info-box">
+Click a year to view details.
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">🏆 FIFA Trophy</h2>
+
+<div class="trophy-container">
+
+<div class="trophy">
+🏆
+</div>
+
+<p>
+The FIFA World Cup Trophy is awarded to the champions.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">🌍 Country Comparison</h2>
+
+<div class="comparison">
+
+<select id="country">
+
+<option>Brazil</option>
+<option>Germany</option>
+<option>Argentina</option>
+<option>Italy</option>
+<option>France</option>
+
+</select>
+
+<button class="btn"
+onclick="showCountryInfo()">
+Show Info
+</button>
+
+<div id="countryInfo"></div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Football Legends</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🇧🇷 Pelé</h3>
+<p>Only player with 3 World Cup titles.</p>
+</div>
+
+<div class="card">
+<h3>🇦🇷 Lionel Messi</h3>
+<p>World Cup Champion 2022.</p>
+</div>
+
+<div class="card">
+<h3>🇦🇷 Diego Maradona</h3>
+<p>Captain of Argentina's 1986 triumph.</p>
+</div>
+
+<div class="card">
+<h3>🇵🇹 Cristiano Ronaldo</h3>
+<p>One of football's all-time great scorers.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>⚽ FIFA Interactive Hub © 2026</p>
+
+</footer>
+
+<div class="ball">
+⚽
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
